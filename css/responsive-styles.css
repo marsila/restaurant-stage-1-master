@@ -1,0 +1,51 @@
+@media screen and (min-width: 650px) {
+  #restaurants-list li {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #restaurants-list li {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #reviews-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1045px) {
+  #restaurants-list li {
+    width: 270px;
+  }
+}
+
+/* ====================== Restaurant Details ====================== */
+
+@media screen and (min-width: 1024px) {
+  #breadcrumb {
+    margin: 0;
+    width: calc(50% - 80px);
+  }
+  .inside #map-container {
+    position: fixed;
+    height: 87%;
+    width: 50%;
+  }
+  .inside #footer {
+    position: absolute;
+  }
+  #restaurant-container, #reviews-container {
+    width: 50%;
+  }
+  #restaurant-name {
+    margin: 15px 0 30px;
+  }
+  .inside #footer {
+    position: absolute;
+    width: 45%;
+  }
+}
