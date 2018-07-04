@@ -85,7 +85,7 @@ window.initMap = () => {
   });
   updateRestaurants();
   google.maps.event.addListenerOnce(map, 'idle', () => {
-    document.getElementsByTagName('iframe')[0].title = "Google Maps";
+    document.getElementsByTagName('iframe')[0].title = "Resturants locations in Google Maps";
   });
 }
 
@@ -183,5 +183,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
 
   });
+}
 
+//Registering the Service Worker.
+if ('serviceWorker' in navigator) {
+  console.log('service worker registration in progress.');
+  navigator.serviceWorker.register('/sw.js').then((reg) => {
+    console.log(`service worker registration completed! ${reg}`);
+  }).catch((err) => {
+    console.log(`service worker registration failure! ${err}`);
+  });
 }
